@@ -20,8 +20,19 @@ function OTP() {
     e.preventDefault();
     const otpCode = otp.join('');
     console.log('OTP:', otpCode);
-    // Aquí irá tu lógica de verificación OTP
-    alert('OTP verificado: ' + otpCode);
+    
+    // **Simulación de lógica de verificación OTP**
+    // **En una aplicación real, harías una llamada API aquí.**
+    
+    // Suponemos que la verificación es exitosa si el código tiene 6 dígitos.
+    if (otpCode.length === 6) {
+      alert('OTP verificado correctamente: ' + otpCode);
+      // **Añadimos la navegación a la ruta '/home'**
+      // Asegúrate de que esta ruta esté configurada en tu Router.
+      navigate('/home'); 
+    } else {
+      alert('Código OTP inválido o incompleto.');
+    }
   };
 
   return (
@@ -59,6 +70,7 @@ function OTP() {
   );
 }
 
+// ... (Los estilos permanecen igual, no es necesario incluirlos de nuevo si el usuario ya los tiene)
 const styles = {
   container: {
     display: 'flex',
